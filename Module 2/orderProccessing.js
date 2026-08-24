@@ -30,4 +30,29 @@ function capitalized(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+function processOrder(user, itemPrice, discountCode) {
+    console.log(`--- processing order for ${capitalized(user.name)} ---`);
+    if(!isValidEmail(user.email)) {
+        console.log("Email is unvalid, please enter a valid email!");
+    }
 
+    let currentPrice = itemPrice;
+
+    if(discountCode = "NLB") {
+        currentPrice = calculateDiscount(currentPrice, 20);
+        console.log("20% discount applied!");
+    }
+
+    let totalBill = calculateFinalBill(currentPrice);
+
+    console.log(`Final amount to pay: ${formatBDT(totalBill)}`);
+    console.log("Oder completed successfully");
+}
+
+
+let user1 = {
+    name : "Jahan",
+    email : "Jahan@gmail.com"
+}
+
+processOrder(user1, 1840, "NLB");
