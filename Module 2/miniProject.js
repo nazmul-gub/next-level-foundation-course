@@ -41,7 +41,23 @@ function findStudent(id) {
     }
 }
 
+findStudent(102);
 
 function deleteStudent(id) {
-    
+    let targetStudent = -1;
+    for(let i=0; i<students.length; i++) {
+        if(students[i].id == id) {
+            targetStudent = i; break;
+        }
+    }
+
+    if(targetStudent != -1) {
+        let deletedStudent = students.splice(targetStudent, 1);
+        console.log(`Deleted student ${deletedStudent[0].name} Id: ${targetStudent} deleted!`)
+    } else {
+        console.log("404 not found!");
+    }
 }
+
+deleteStudent(102);
+getAll();
