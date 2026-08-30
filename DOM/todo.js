@@ -31,5 +31,33 @@
 // let a = ab.getAttribute("class");
 // console.log(a);
 
+// let para = document.querySelector("#myPara");
+// console.log(para);
+
+let st = document.querySelector("div");
+// console.log(st);
+
+st.style.backgroundColor = "blue";
+st.style.color = "whitesmoke";
+st.innerText = "hello dom";
+
+// st.style.visibility = "hidden"
+
+
+let newBtn = document.createElement("button");
+newBtn.innerText = "Join us"
+console.log(newBtn);
+
+// st.append(newBtn);
+// st.prepend(newBtn);
+// st.before(newBtn);
+st.after(newBtn);
+
+let newHeading = document.createElement("h1");
+
+newHeading.innerHTML = "<i>I am new</i>";
+
+document.querySelector("body").prepend(newHeading);
+
 let para = document.querySelector("#myPara");
-console.log(para);
+para.remove();
