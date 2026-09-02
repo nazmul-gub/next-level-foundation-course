@@ -93,3 +93,21 @@ div.innerText = "<p>this is my div</p>";
 document.body.appendChild(div);
 div.className = "myDivClass";
 
+
+let text = document.createTextNode("CreateElement example");
+div.appendChild(text);
+
+document.body.appendChild(div);
+
+
+let p = document.createElement('p');
+p.textContent = "this is a text content"
+div.appendChild(p)
+
+let menu = document.querySelector("#menu")
+let li = document.createElement("li");
+li.textContent = "products";
+menu.appendChild(li);
+
+li.textContent = 'About Us';
+menu.appendChild(li);
